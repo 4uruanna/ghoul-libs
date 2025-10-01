@@ -2,11 +2,10 @@
   "name": "ghoul-libs",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "components:dev": "nodemon --config nodemon.components.json",
+    "components:build": "ng build ghoul-components",
+    "components:release": "cd dist/ghoul-components && npm publish",
+    "components:package": "cd dist/ghoul-components && npm pack"
   },
   "prettier": {
     "printWidth": 100,
@@ -43,6 +42,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^20.3.0",
+    "nodemon": "^3.1.10",
     "typescript": "~5.9.2"
   }
 }
