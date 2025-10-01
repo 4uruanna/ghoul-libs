@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-ghoul-components',
+  selector: 'gc-ghoul-components',
   imports: [],
   template: ` <p>ghoul-components works!</p> `,
   styles: ``,
