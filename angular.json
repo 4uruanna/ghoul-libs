@@ -26,8 +26,23 @@
           "options": {
             "tsConfig": "projects/ghoul-components/tsconfig.spec.json"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ghoul-components/**/*.ts",
+              "projects/ghoul-components/**/*.html"
+            ],
+            "eslintConfig": "projects/ghoul-components/eslint.config.js"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }
