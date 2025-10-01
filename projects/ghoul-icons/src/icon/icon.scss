@@ -1,0 +1,14 @@
+.gc-icon {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-position: center center;
+  background-color: #ff0000; /* Your desired color */
+  mask-size: contain;
+  -webkit-mask-size: contain;
+
+  &.ghoul {
+    mask-image: url('../../assets/ghoul.svg');
+    -webkit-mask-image: url('../../assets/ghoul.svg');
+  }
+}
