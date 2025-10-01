@@ -1,0 +1,10 @@
+{
+  "restartable": "rs",
+  "verbose": false,
+  "watch": ["./projects/ghoul-icons/"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "*",
+  "exec": "npm run icons:build && npm run icons:package"
+}

@@ -7,7 +7,11 @@
     "components:build": "npm run components:build:tailwind && ng build ghoul-components",
     "components:release": "npm run lint && npm run components:build && cd dist/ghoul-components && npm publish",
     "components:package": "cd dist/ghoul-components && npm pack",
-    "components:build:tailwind": "npx @tailwindcss/cli --cwd ./projects/ghoul-components/src -i style.scss -o style.css --minify"
+    "components:build:tailwind": "npx @tailwindcss/cli --cwd ./projects/ghoul-components/src -i style.scss -o style.css --minify",
+    "icons:dev": "nodemon --config nodemon.icons.json",
+    "icons:build": "ng build ghoul-icons",
+    "icons:release": "npm run lint && npm run icons:build && cd dist/ghoul-icons && npm publish",
+    "icons:package": "cd dist/ghoul-icons && npm pack"
   },
   "prettier": {
     "printWidth": 100,
