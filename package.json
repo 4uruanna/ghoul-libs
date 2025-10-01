@@ -4,7 +4,7 @@
   "scripts": {
     "lint": "ng lint --fix",
     "components:dev": "nodemon --config nodemon.components.json",
-    "components:build": "ng build ghoul-components",
+    "components:build": "npm run components:build:tailwind && ng build ghoul-components",
     "components:release": "npm run lint && npm run components:build && cd dist/ghoul-components && npm publish",
     "components:package": "cd dist/ghoul-components && npm pack",
     "components:build:tailwind": "npx @tailwindcss/cli --cwd ./projects/ghoul-components/src -i style.scss -o style.css --minify"
