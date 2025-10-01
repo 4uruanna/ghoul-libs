@@ -4,8 +4,9 @@
   "scripts": {
     "components:dev": "nodemon --config nodemon.components.json",
     "components:build": "ng build ghoul-components",
-    "components:release": "cd dist/ghoul-components && npm publish",
-    "components:package": "cd dist/ghoul-components && npm pack"
+    "components:release": "npm run components:build && cd dist/ghoul-components && npm publish",
+    "components:package": "cd dist/ghoul-components && npm pack",
+    "components:build:tailwind": "npx @tailwindcss/cli --cwd ./projects/ghoul-components/src -i style.scss -o style.css --minify"
   },
   "prettier": {
     "printWidth": 100,
@@ -27,7 +28,9 @@
     "@angular/forms": "^20.3.0",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@tailwindcss/cli": "^4.1.13",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.1.13",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
