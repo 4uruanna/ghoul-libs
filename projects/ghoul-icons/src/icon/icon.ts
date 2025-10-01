@@ -12,4 +12,7 @@ export class Icon {
 
     @Input()
     size: string | number = 24;
+
+    @Input()
+    color = 'black';
 }
