@@ -3,5 +3,31 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ghoul-components": {
+      "projectType": "library",
+      "root": "projects/ghoul-components",
+      "sourceRoot": "projects/ghoul-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ghoul-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ghoul-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/ghoul-components/tsconfig.spec.json"
+          }
+        }
+      }
+    }
   }
 }
