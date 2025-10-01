@@ -5,9 +5,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "ghoul-components": [
-        "./dist/ghoul-components"
-      ]
+      "ghoul-components": ["./dist/ghoul-components"],
+      "ghoul-icons": ["./dist/ghoul-icons"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -34,6 +33,12 @@
     },
     {
       "path": "./projects/ghoul-components/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ghoul-icons/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ghoul-icons/tsconfig.spec.json"
     }
   ]
 }

@@ -38,11 +38,42 @@
           }
         }
       }
+    },
+    "ghoul-icons": {
+      "projectType": "library",
+      "root": "projects/ghoul-icons",
+      "sourceRoot": "projects/ghoul-icons/src",
+      "prefix": "gc",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ghoul-icons/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ghoul-icons/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/ghoul-icons/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/ghoul-icons/**/*.ts", "projects/ghoul-icons/**/*.html"],
+            "eslintConfig": "projects/ghoul-icons/eslint.config.js"
+          }
+        }
+      }
     }
   },
   "cli": {
-    "schematicCollections": [
-      "angular-eslint"
-    ]
+    "schematicCollections": ["angular-eslint"]
   }
 }
